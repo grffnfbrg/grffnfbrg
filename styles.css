@@ -456,6 +456,11 @@ ion-icon {
   align-items: center;
 }
 
+#container__nav {
+    display: none;
+    
+  }
+
 .nameplate {
   display: flex;
   flex-direction: column;

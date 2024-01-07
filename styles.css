@@ -13,6 +13,7 @@ html {
 body {
   min-height: 100svh;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .container {
@@ -22,6 +23,7 @@ body {
   max-width: 85%;
   margin: auto;
   height: 100svh;
+  overflow: hidden;
 }
 
 .about {
@@ -57,7 +59,7 @@ body {
 .about__shell {
   display: flex;
   gap: 3rem;
-  width: clamp(60%, 500px, 300px);
+  width: clamp(300px, 60%, 370px);
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -68,7 +70,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: clamp(60%, 500px, 300px);
+  width: clamp(300px, 60%, 370px);
   margin: auto;
   height: 100%;
   gap: 1.5rem;
@@ -260,6 +262,10 @@ ul li:hover::after {
   margin: auto;
 }
 
+#container__nav {
+  display: none;
+}
+
 .gallery__img {
   transition: translate ease-in 200ms;
   cursor: pointer;
@@ -338,7 +344,7 @@ ul li:hover::after {
   flex-direction: column;
   gap: 3rem;
   flex-wrap: wrap;
-  width: clamp(60%, 500px, 300px);
+  width: clamp(300px, 60%, 370px);
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -456,11 +462,6 @@ ion-icon {
   align-items: center;
 }
 
-#container__nav {
-    display: none;
-    
-  }
-
 .nameplate {
   display: flex;
   flex-direction: column;
@@ -486,7 +487,7 @@ footer p {
   opacity: 0.7;
 }
 
-@media (width < 400px) {
+@media screen and (max-width: 1000px) {
   .window {
     height: 400px;
   }
@@ -540,6 +541,10 @@ footer p {
   #container__nav a {
     color: white;
   }
+  #container__nav {
+    display: flex;
+  }
+
   #about__nav,
   #gallery__nav,
   #contact__nav {

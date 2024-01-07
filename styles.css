@@ -491,6 +491,10 @@ footer p {
   .window {
     height: 400px;
   }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
   .name {
     pointer-events: none;
     font-size: 3rem;
